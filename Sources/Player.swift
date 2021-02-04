@@ -109,7 +109,12 @@ open class Player: UIViewController {
             }
         }
     }
-
+    
+    public var automaticallyWaitsToMinimizeStalling: Bool {
+      set { self._avplayer.automaticallyWaitsToMinimizeStalling = newValue }
+      get { self._avplayer.automaticallyWaitsToMinimizeStalling }
+    }
+  
     /// Asset buffering states.
     public enum BufferingState: Int, CustomStringConvertible {
         case unknown = 0
